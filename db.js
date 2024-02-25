@@ -6,17 +6,13 @@ const { getDatabaseUri } = require("./config");
 let db;
 
 if (process.env.NODE_ENV === "production") {
-  db = new Client({
-    user: "wdxvbyxa",
-    database: getDatabaseUri(),
-    host: "bubble.db.elephantsql.com",
-    port: 5432
-  });
+  db = new Client(
+    getDatabaseUri()
+  );
 } else {
-  db = new Client({
-    database: getDatabaseUri(),
-    port: 5432
-  });
+  db = new Client(
+    getDatabaseUri(),
+  );
   
 }
 
