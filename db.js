@@ -6,7 +6,6 @@ const { getDatabaseUri } = require("./config");
 let db;
 
 if (process.env.NODE_ENV === "production") {
-  console.log("DBURI:", getDatabaseUri());
   db = new Client({
     database: getDatabaseUri(),
     port: 5432
@@ -16,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
     database: getDatabaseUri(),
     port: 5432
   });
-  console.log(db);
+  console.log("database object:", db);
 }
 
 db.connect();
