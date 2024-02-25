@@ -15,8 +15,10 @@ if (process.env.NODE_ENV === "production") {
     database: getDatabaseUri(),
     port: 5432
   });
-  console.log("database object:", db);
+  
 }
+
+console.log("database object:", db);
 
 db.connect();
 
