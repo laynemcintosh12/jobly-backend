@@ -7,6 +7,7 @@ let db;
 
 if (process.env.NODE_ENV === "production") {
   db = new Client({
+    user: "wdxvbyxa",
     database: getDatabaseUri(),
     host: "bubble.db.elephantsql.com",
     port: 5432
